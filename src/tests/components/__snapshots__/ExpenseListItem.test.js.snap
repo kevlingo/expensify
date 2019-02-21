@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render expense list item with supplied data 1`] = `
+<div>
+  <Link
+    replace={false}
+    to="/edit/2"
+  >
+    <h3>
+      rent
+    </h3>
+  </Link>
+  <p>
+    $1,095.00
+     - 
+    December 27th, 1969
+  </p>
+</div>
+`;
