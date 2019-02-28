@@ -1,4 +1,9 @@
-import { addExpense, editExpense, removeExpense } from '../../actions/expenses';
+import {
+  addExpense,
+  editExpense,
+  removeExpense,
+  setExpenes
+} from '../../actions/expenses';
 import expensesReducer from '../../reducers/expenses';
 import expenses from '../fixtures/expenes';
 
@@ -40,4 +45,10 @@ test('should edit an expense', () => {
 test('should not edit an expense if id is not found', () => {
   const result = expensesReducer(expenses, editExpense('123', { amount: -1 }));
   expect(result).toEqual(expenses);
+});
+
+test('should set expenes', () => {
+  const action = setExpenes([expenses[1]]);
+  const state = expensesReducer(expenses, action);
+  expect(state).toEqual([expenses[1]]);
 });
