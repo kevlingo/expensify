@@ -2,7 +2,7 @@ import {
   addExpense,
   editExpense,
   removeExpense,
-  setExpenes
+  setExpenses
 } from '../../actions/expenses';
 import expensesReducer from '../../reducers/expenses';
 import expenses from '../fixtures/expenes';
@@ -48,7 +48,7 @@ test('should not edit an expense if id is not found', () => {
 });
 
 test('should set expenes', () => {
-  const action = setExpenes([expenses[1]]);
+  const action = setExpenses([expenses[1]]);
   const state = expensesReducer(expenses, action);
   expect(state).toEqual([expenses[1]]);
 });
